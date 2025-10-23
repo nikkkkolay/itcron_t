@@ -1,0 +1,81 @@
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-accent: #ff6363;
+  --color-secondary: #e7fafe;
+  --color-gray: rgb(0 0 0 / 10%);
+  --color-gray-50: rgb(0 0 0 / 5%);
+  --color-gray-600: rgb(0 0 0 / 60%);
+  --color-gray-alt: #dbe2e5;
+
+  --drop-shadow: 10px 20px 40px rgb(41 64 70 / 10%);
+
+  --border-radius-m: 60px;
+  --border-radius: 30px;
+  --border-radius-s: 16px;
+
+  --font-family-base: "Inter", sans-serif;
+
+  --container-width: 1200px;
+  --container-padding-x: 16px;
+  --section-padding-y: clamp(40px, 5vw, 80px);
+  --transition-duration: 0.2s;
+}
+
+html.is-lock {
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  /* font-size: 16px; вопрос */
+  color: var(--color-black);
+  background-color: var(--color-white);
+  font-family: var(--font-family-base);
+  font-weight: 400;
+}
+
+h1,
+.h1 {
+  font-size: clamp(28px, 4vw, 64px);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h2,
+.h2 {
+  font-size: clamp(24px, 3vw, 48px);
+  font-weight: 600;
+}
+
+h3,
+.h3 {
+  font-size: clamp(20px, 2.5vw, 38px);
+  font-weight: 700;
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
