@@ -1,0 +1,32 @@
+export default {
+  extends: ["stylelint-config-standard"],
+  plugins: ["stylelint-order"],
+  ignoreFiles: ["dist/**/*"],
+  rules: {
+    "selector-class-pattern": null,
+    "no-descending-specificity": null,
+    "order/properties-order": [
+      [
+        "display",
+        "flex-direction",
+        "justify-content",
+        "align-items",
+        "position",
+        "inset",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "width",
+        "height",
+        "padding",
+        "margin",
+        "font-size",
+        "color",
+        "background",
+        "border",
+      ],
+      { unspecified: "bottomAlphabetical" },
+    ],
+  },
+};
