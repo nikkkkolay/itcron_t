@@ -1,69 +1,36 @@
 :root {
-  --color-white: #fff;
-  --color-black: #000;
-  --color-accent: #ff6363;
-  --color-secondary: #e7fafe;
-  --color-gray: rgb(0 0 0 / 10%);
-  --color-gray-50: rgb(0 0 0 / 5%);
-  --color-gray-600: rgb(0 0 0 / 60%);
-  --color-gray-alt: #dbe2e5;
-
-  --drop-shadow: 10px 20px 40px rgb(41 64 70 / 10%);
-
-  --border-radius-m: 60px;
-  --border-radius: 30px;
-  --border-radius-s: 16px;
-
-  --font-family-base: "Inter", sans-serif;
-
-  --container-width: 1200px;
-  --container-padding-x: 16px;
-  --section-padding-y: clamp(40px, 5vw, 80px);
-  --transition-duration: 0.2s;
-}
-
-html.is-lock {
-  overflow: hidden;
+  --text-primary: #fff;
+  --bg-primary: #131212;
+  --color-accent: #fb6542;
+  --icon-fill: #fff;
+  --icon-hover-fill: #fb6542;
+  --drop-shadow: 0 0 100px rgb(0 0 0 / 50%);
+  --border-radius-xs: 4px;
+  --font-family-base:
+    "Geometria", system-ui, -apple-system, "Segoe UI", roboto, "Helvetica Neue", arial, sans-serif;
+  --font-family-accent: "Gotham Pro", "Geometria", system-ui, sans-serif;
+  --transition-duration: 0.3s;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  /* font-size: 16px; вопрос */
-  color: var(--color-black);
-  background-color: var(--color-white);
+  font-size: 16px;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
   font-family: var(--font-family-base);
   font-weight: 400;
 }
 
-h1,
-.h1 {
-  font-size: clamp(28px, 4vw, 64px);
-  font-weight: 600;
+h1 {
+  font-family: var(--font-family-accent);
+  letter-spacing: 4px;
   line-height: 1.2;
 }
 
-h2,
-.h2 {
-  font-size: clamp(24px, 3vw, 48px);
-  font-weight: 600;
-}
-
-h3,
-.h3 {
-  font-size: clamp(20px, 2.5vw, 38px);
-  font-weight: 700;
-}
-
 a,
-button,
-label,
-input,
-textarea,
-select,
 svg * {
-  transition-duration: var(--transition-duration);
+  transition:
+    fill var(--transition-duration) ease,
+    color var(--transition-duration) ease;
 }
 
 a {
